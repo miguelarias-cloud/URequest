@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <link rel="stylesheet" href="css/styles.css" type="text/css">
+<script></script>
 <head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,29 @@
 <body class="body">
     <header class="banner">
         <img src="images/URequest_logo.png" alt="URequest" class="logo">
+        <button class="btn_menu_desplegable" id="boton_menu_desplegable"></button>        
     </header>
+    <script>
+
+        const btn_menu_desplegable=document.getElementById("boton_menu_desplegable");
+       
+        btn_menu_desplegable.addEventListener("click", 
+        function (){
+                document.getElementById("menu_desplegable").style.right="0px";  
+        });
+        
+    </script>
+
+    <aside class="menu_desplegable" id="menu_desplegable">
+        <button class="btn_cierre_menu_desplegable" id="btn_cierre_menu_desplegable"></button>
+            <script>
+                const btn_cierre_menu_desplegable=document.getElementById("btn_cierre_menu_desplegable");
+
+                btn_cierre_menu_desplegable.addEventListener("click", 
+                function (){
+                    document.getElementById("menu_desplegable").style.right="-500px";  
+                });
+            </script>
+    </aside>
 </body>
 </html>

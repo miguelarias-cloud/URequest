@@ -14,4 +14,51 @@
     width: 216px;
     height: 216px;
     object-fit: contain;
+    align-items: left;
+}
+.btn_menu_desplegable{
+    position: fixed;
+    align-self: center;
+    right: 60px;
+    cursor: pointer;
+    width:61px ;
+    height:34px;
+    object-fit: contain;
+    background-image: url("../images/btn_menu_desplegable.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-width: 0px;
+}
+
+.btn_menu_desplegable:hover{
+    width:61px ;
+    height:34px;
+    object-fit: contain;
+    background-image: url("../images/btn_menu_desplegable_hover.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu_desplegable{
+    background-color: rgb(236, 230, 213);
+    position:fixed;
+    top: 0;
+    right: -500px;
+    width: 419px;
+    height: 100%;
+    transition: right 0.3s ease;
+}
+
+.btn_cierre_menu_desplegable{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width:40px ;
+    height:40px;
+    object-fit: contain;
+    background-image: url("../images/btn_cierre_menu_desplegable.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-width: 0px;
 }
