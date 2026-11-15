@@ -1,3 +1,4 @@
+
 .body{
     background-color: rgb(236, 230, 213);
     margin: 0;
@@ -7,15 +8,17 @@
     width: 100%;
     height: 216 px;
     padding: 0px;
-    box-sizing: border-box;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
 }
+
+
 .logo{
     width: 216px;
     height: 216px;
     object-fit: contain;
     align-items: left;
 }
+
 .btn_menu_desplegable{
     position: fixed;
     align-self: center;
@@ -28,7 +31,7 @@
     background-position: center;
     background-repeat: no-repeat;
     border-width: 0px;
-}
+    }
 
 .btn_menu_desplegable:hover{
     width:61px ;
@@ -44,10 +47,10 @@
     position:fixed;
     top: 0;
     right: -500px;
-    width: 419px;
+    width: 28%;
     height: 100%;
     transition: right 0.3s ease;
-}
+    }
 
 .btn_cierre_menu_desplegable{
     position: absolute;
@@ -61,4 +64,72 @@
     background-position: center;
     background-repeat: no-repeat;
     border-width: 0px;
+    }
+
+.btn_cierre_menu_desplegable:hover{
+    width: 40px ;
+    height:40px;
+    object-fit: contain;
+    background-image: url("../images/btn_cierre_menu_desplegable_hover.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn_crear_anuncio{
+    font-family: Inria Serif;
+    font-size: 40px;
+    width: 100%;
+    height: 89px;
+    background-color: rgb(236, 230, 213);
+    top: 237px;
+    position: absolute;
+    border-width: 0px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn_ver_anuncios_usuario{
+    font-family: Inria Serif;
+    font-size: 40px;
+    width: 100%;
+    height: 89px;
+    background-color: rgb(236, 230, 213);
+    top: 376px;
+    position: absolute;
+    border-width: 0px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn_crear_anuncio:hover{
+    font-family: Inria Serif;
+    font-size: 40px;
+    width: 100%;
+    height: 89px;
+    background-color: rgb(225, 204, 168);
+    top: 237px;
+    position: absolute;
+    border-width: 0px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn_ver_anuncios_usuario:hover{
+    font-family: Inria Serif;
+    font-size: 40px;
+    width: 100%;
+    height: 89px;
+    background-color: rgb(225, 204, 168);
+    top: 376px;
+    position: absolute;
+    border-width: 0px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+
+@layer capa_superior{
+    .capa_superior{
+        position: fixed;
+        margin: 0;
+        width: 100%;
+        background-color: rgba(136, 139, 141,0);
+        height: 100%;
+    }
 }

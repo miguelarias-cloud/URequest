@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <link rel="stylesheet" href="css/styles.css" type="text/css">
-<script></script>
+
 <head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URequest</title>
 </head>
+
 <body class="body">
+    
+    <div class="capa_superior" id="capa_superior"></div>
+
     <header class="banner">
         <img src="images/URequest_logo.png" alt="URequest" class="logo">
         <button class="btn_menu_desplegable" id="boton_menu_desplegable"></button>        
     </header>
-    <script>
-
-        const btn_menu_desplegable=document.getElementById("boton_menu_desplegable");
-       
-        btn_menu_desplegable.addEventListener("click", 
-        function (){
-                document.getElementById("menu_desplegable").style.right="0px";  
-        });
-        
-    </script>
 
     <aside class="menu_desplegable" id="menu_desplegable">
-        <button class="btn_cierre_menu_desplegable" id="btn_cierre_menu_desplegable"></button>
-            <script>
-                const btn_cierre_menu_desplegable=document.getElementById("btn_cierre_menu_desplegable");
 
-                btn_cierre_menu_desplegable.addEventListener("click", 
-                function (){
-                    document.getElementById("menu_desplegable").style.right="-500px";  
-                });
-            </script>
+        <button class="btn_cierre_menu_desplegable" id="btn_cierre_menu_desplegable"></button>
+
+        <button class="btn_crear_anuncio" id="btn_crear_anuncio">Crear Anuncio</button>
+
+        <button class="btn_ver_anuncios_usuario" id="btn_ver_anuncios_usuario">Tus Anuncios</button>
+
     </aside>
+
+    
+
+
+    <script src="script/script.js"></script>
 </body>
 </html>
