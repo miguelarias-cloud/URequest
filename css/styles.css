@@ -124,6 +124,108 @@
 }
 
 
+.ventana::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.ventana {
+    background: #EFE9D5;
+    border: none;
+    border-radius: 4px;
+    padding: 25px;
+    width: 90%;
+    max-width: 420px;
+    font-family: Georgia, serif;
+}
+
+/*apilamos un campo bajo el otro*/
+.campo_texto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+input[type="text"], .caja-desc {
+    background: #DEC89E;
+    border: none;
+    padding: 14px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+/*se dibuja el cambio de cuando se selecciona la checkbox de gris a verde*/
+.opciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.opciones label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.opciones input {
+    display: none;
+}
+
+.opciones span {
+    width: 20px;
+    height: 20px;
+    background: #DCDCDC;
+}
+
+.opciones input:checked + span {
+    background: #4A6B53;
+}
+/*hacemos que el campo de descripcion parezca una sola caja grande con el contador de 0/500 abajo*/
+.caja-desc {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    background: transparent;
+    border: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+#contador {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    font-size: 13px;
+}
+
+/*acomodo los botones a la derecha y les doy un color verde y gris*/
+.botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btns_ventana_publicar {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #4A6B53;
+    color: white;
+    font-family: inherit;
+}
+
+#cerrar {
+    background: #DCDCDC;
+    color: #333;
+}
+
+
 @layer capa_superior{
     .capa_superior{
         position: fixed;
