@@ -4,15 +4,18 @@ public class Usuario {
     private int id;
     private String nombre;
     private String correoInstitucional;
-    private String password;
+    private String passwordHash;
+    private String passwordSalt;
     private String telefono;
     private String carrera;
 
-    public Usuario(int id, String nombre, String correoInstitucional, String password, String telefono, String carrera) {
+    public Usuario(int id, String nombre, String correoInstitucional, String passwordHash,
+            String passwordSalt, String telefono, String carrera) {
         this.id = id;
         this.nombre = nombre;
         this.correoInstitucional = correoInstitucional;
-        this.password = password;
+        this.passwordHash = passwordHash;
+        this.passwordSalt = passwordSalt;
         this.telefono = telefono;
         this.carrera = carrera;
     }
@@ -41,12 +44,20 @@ public class Usuario {
         this.correoInstitucional = correoInstitucional;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPasswordHash() {
+        return passwordHash;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
+
+    public String getPasswordSalt() {
+        return passwordSalt;
+    }
+
+    public void setPasswordSalt(String passwordSalt) {
+        this.passwordSalt = passwordSalt;
     }
 
     public String getTelefono() {

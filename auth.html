@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso | URequest</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body class="body auth-body" data-page="auth">
+    <main class="auth-contenedor">
+        <a class="auth-logo" href="auth.html" aria-label="URequest, inicio">
+            <img src="images/URequest_logo.png" alt="URequest">
+        </a>
+        <section class="auth-tarjeta">
+            <p class="eyebrow">COMUNIDAD UNIVERSITARIA</p>
+            <h1 id="titulo_auth">Bienvenido a URequest</h1>
+            <p class="auth-descripcion">Ingresa con tu correo institucional para descubrir y compartir con la comunidad.</p>
+
+            <form class="auth-formulario" id="form_login">
+                <label class="campo-formulario">
+                    <span>Correo institucional</span>
+                    <input name="correo" type="email" autocomplete="username" placeholder="nombrecorreo@autonoma.edu.co" required>
+                </label>
+                <label class="campo-formulario">
+                    <span>Contraseña</span>
+                    <input name="password" type="password" autocomplete="current-password" minlength="8" placeholder="Mínimo 8 caracteres" required>
+                </label>
+                <button class="accion-principal auth-submit" type="submit">Iniciar sesión</button>
+                <p class="auth-cambio">¿Aún no tienes cuenta? <button type="button" id="mostrar_registro">Crear cuenta</button></p>
+            </form>
+
+            <form class="auth-formulario" id="form_registro" hidden>
+                <label class="campo-formulario">
+                    <span>Nombre</span>
+                    <input name="nombre" type="text" autocomplete="name" maxlength="80" placeholder="Tu nombre" required>
+                </label>
+                <label class="campo-formulario">
+                    <span>Correo institucional</span>
+                    <input name="correo" type="email" autocomplete="username" placeholder="nombrecorreo@autonoma.edu.co" required>
+                </label>
+                <label class="campo-formulario">
+                    <span>Contraseña</span>
+                    <input name="password" type="password" autocomplete="new-password" minlength="8" placeholder="Mínimo 8 caracteres" required>
+                </label>
+                <button class="accion-principal auth-submit" type="submit">Crear cuenta</button>
+                <p class="auth-cambio">¿Ya tienes cuenta? <button type="button" id="mostrar_login">Iniciar sesión</button></p>
+            </form>
+            <p class="mensaje-formulario" id="mensaje_auth" role="status" aria-live="polite"></p>
+            <p class="auth-aviso">Prototipo local: solo valida el formato del correo; no confirma que la cuenta pertenezca a la universidad. Las cuentas y publicaciones quedan guardadas en este navegador.</p>
+        </section>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+</html>

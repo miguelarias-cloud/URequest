@@ -3,9 +3,13 @@ import dao.AnuncioDAOMemoria;
 import dao.UsuarioDAO;
 import dao.UsuarioDAOMemoria;
 import modelo.Anuncio;
+import modelo.PuntoRuta;
+import modelo.TipoAnuncio;
 import modelo.Usuario;
 import servicio.AnuncioService;
 import servicio.AuthService;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,9 +25,13 @@ public class Main {
                 "Carlos Ruiz", "carlos.ruiz@autonoma.edu.co", "clave456", "", "Diseño");
 
         anuncioService.publicarAnuncio(
-                "Libro Cálculo Vectorial", "En buen estado, entrega en el campus.", "Libros", 45000, laura);
+                "Libro Cálculo Vectorial", TipoAnuncio.PRODUCTO,
+                "En buen estado, entrega en el campus.", laura.getCorreoInstitucional(),
+                Collections.emptyList(), laura);
         anuncioService.publicarAnuncio(
-                "Cupo en carro hacia el centro", "Salgo a las 6:00 PM desde portería.", "Transporte", 5000, carlos);
+                "Cupo en carro hacia el centro", TipoAnuncio.TRANSPORTE,
+                "Salgo a las 6:00 PM desde portería.", carlos.getCorreoInstitucional(),
+                Arrays.asList(new PuntoRuta(3.4516, -76.5320), new PuntoRuta(3.4372, -76.5225)), carlos);
 
         for (Anuncio anuncio : anuncioService.obtenerTodosLosAnuncios()) {
             System.out.println("Título: " + anuncio.getTitulo() + " | Autor: " + anuncio.getAutor().getNombre());

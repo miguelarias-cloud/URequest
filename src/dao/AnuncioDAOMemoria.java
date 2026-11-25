@@ -1,6 +1,7 @@
 package dao;
 
 import modelo.Anuncio;
+import modelo.TipoAnuncio;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -25,10 +26,10 @@ public class AnuncioDAOMemoria implements AnuncioDAO {
     }
 
     @Override
-    public List<Anuncio> buscarPorCategoria(String categoria) {
+    public List<Anuncio> buscarPorTipo(TipoAnuncio tipo) {
         return anuncios.stream()
                 .filter(anuncio -> anuncio.isActivo()
-                        && anuncio.getCategoria().equalsIgnoreCase(categoria))
+                        && anuncio.getTipo() == tipo)
                 .collect(Collectors.toList());
     }
 
